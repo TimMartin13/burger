@@ -1,0 +1,14 @@
+
+h1, h2 {
+    text-align: center;
+}
+li {
+    margin: 20px;
+}
+.change-burger {
+    background-color:aqua;
+    float: right;
+    justify-content: right;
+    line-height: 24px;
+    align-content: center;
+}

@@ -1,0 +1,24 @@
+{
+  "name": "burger",
+  "version": "1.0.0",
+  "description": "An application that stores burgers that the user would like to eat and then when they eat one it moves over to the eaten column.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TimMartin13/burger.git"
+  },
+  "author": "Tim Martin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/TimMartin13/burger/issues"
+  },
+  "homepage": "https://github.com/TimMartin13/burger#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^5.2.0",
+    "mysql": "^2.18.1"
+  }
+}

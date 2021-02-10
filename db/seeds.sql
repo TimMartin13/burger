@@ -13,3 +13,5 @@ VALUES ("Double Animal Style", false);
 INSERT INTO burgers (burger_name, devoured)
 VALUES ("Dyer's Deep-Fried Burger", false);
 
+INSERT INTO burgers (burger_name, devoured)
+VALUES ("Lion's Tap California", true);
