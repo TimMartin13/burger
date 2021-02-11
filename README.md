@@ -72,6 +72,6 @@ Github: [TimMartin13](https://github.com/TimMartin13)
 
 ## Links
 
-Heroku: https://dashboard.heroku.com/apps/calm-chamber-62526
+Heroku: https://calm-chamber-62526.herokuapp.com/
 
 Github: https://github.com/TimMartin13/burger
