@@ -1,14 +1,40 @@
 
-h1, h2 {
-    text-align: center;
+body {
+    background-color: #F7F7F7;
 }
+
+h1 {
+    text-align: center;
+    margin: 20px;
+    padding: 20px;
+}
+
+.form-group {
+    text-align: center;
+    margin: 30px;
+}
+/* The buns */
+img {
+    width: 100%;
+}
+/* The colorful burgers */
 li {
     margin: 20px;
+    margin-right: 50px;
+    padding: 15px;
+    font-size: 18px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    text-shadow: 1px 1px black;
+    border-radius: 20px;
 }
+/* The hamburger shaped button */
 .change-burger {
-    background-color:aqua;
     float: right;
-    justify-content: right;
-    line-height: 24px;
-    align-content: center;
+    line-height: 36px;
+    border-radius: 50% 50% 10% 10%;
+    margin-top: -7px;
+    background-image: linear-gradient(tan, saddlebrown, tan);
+    color: white;
 }

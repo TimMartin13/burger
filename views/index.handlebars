@@ -1,102 +1,51 @@
 <nav class="navbar navbar-dark bg-dark">
   <div class="container-fluid">
     <a class="navbar-brand">Eat-Da-Burger!</a>
-    {{!-- <form class="d-flex">
+    <form class="d-flex create-form">
       <input class="form-control me-2" type="text" placeholder="Add a new burger" id="ca" name="name">
       <button class="btn btn-outline-success" type="submit">Enter</button>
-    </form> --}}
+    </form>
   </div>
 </nav>
 
-<h1>Burgers!</h1>
-
 <div class="container">
   <div class="row justify-content-center" >
-    <div class="col-md-6 col-sm-12" style="background-color: grey;">
-      <h2>Burgers that are not devoured!</h2>
-      <ul>
+    <div class="col-lg-6 col-md-12">
+      <h1>The Uneaten...</h1>
+      <img src="/assets/img/top_bun.png" alt="Top of a hamburger bun">
+      <ul class="fa-ul">
         {{#each burgers}}
             {{#unless devoured}}
                 <li>
                     {{burger_name}}
 
                     <button class="change-burger" data-id="{{id}}" data-devoured="{{devoured}}">
-                    {{#if devoured}}{{else}}Devour it!{{/if}}
+                      Eat it!  
                     </button>
                 </li>
             {{!-- {{> cats/cat-block sleep=true}} --}}
             {{/unless}}
         {{/each}}
         </ul>
+        <img src="/assets/img/bottom_bun.png" alt="Bottom of a hamburger bun">
     </div>
-    <div class="col-md-6 col-sm-12" style="background-color:blueviolet;">
-      <h2>Burgers that are devoured!</h2>
-      <ul>
+    <div class="col-lg-6 col-md-12">
+      <h1>Ugh, my belly is full.</h1>
+      <img src="/assets/img/top_bun.png" alt="Top of a hamburger bun">
+      <ul class="fa-ul">
         {{#each burgers}}
             {{#if devoured}}
-            <li>{{burger_name}}</li>
+            <li>
+              {{burger_name}}
+            </li>
             {{/if}}
         {{/each}}
         </ul>
+        <img src="/assets/img/bottom_bun.png" alt="Bottom of a hamburger bun">
     </div>
   </div>
 </div>
 
-<h2>Add a Burger</h2>
-<form class="create-form">
-
-  <div class="form-group">
-    <label for="ca">Burger Name:</label>
-    <input type="text" id="ca" name="name">
-  </div>
-
-  <button type="submit">Add Burger</button>
-</form>
-
 <script>
-  $(function() {
-    $(".change-burger").on("click", function(event) {
-        var id = $(this).data("id");
-        var newDevoured = $(this).data("devoured");
-
-        var newDevouredState = {
-            devoured: devoured
-        };
-
-        // Send the PUT request.
-        $.ajax("/api/burgers/" + id, {
-        type: "PUT",
-        data: newDevouredState
-        }).then(
-        function() {
-            console.log("changed devoured to", newDevoured);
-            // Reload the page to get the updated list
-            location.reload();
-        }
-        );
-    });
-
-    $(".create-form").on("submit", function(event) {
-        // Make sure to preventDefault on a submit event.
-        event.preventDefault();
-
-        var newBurger = {
-        name: $("#ca").val().trim(),
-        devoured: 0
-        };
-        console.log(newBurger);
-        // Send the POST request.
-        $.ajax("/api/burgers", {
-        type: "POST",
-        data: newBurger
-        }).then(
-        function() {
-            console.log("created new burger");
-            // Reload the page to get the updated list
-            location.reload();
-        }
-      );
-    });
-  })
-
+  
 </script>
