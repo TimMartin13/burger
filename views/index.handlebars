@@ -1,3 +1,4 @@
+{{!-- Nav Bar --}}
 <nav class="navbar navbar-dark bg-dark">
   <div class="container-fluid">
     <a class="navbar-brand">Eat-Da-Burger!</a>
@@ -7,31 +8,36 @@
     </form>
   </div>
 </nav>
-
+{{!-- Main content --}}
 <div class="container">
   <div class="row justify-content-center" >
     <div class="col-lg-6 col-md-12">
+      {{!-- The uneaten column --}}
       <h1>The Uneaten...</h1>
+      {{!-- Bun image --}}
       <img src="/assets/img/top_bun.png" alt="Top of a hamburger bun">
+      {{!-- Unordered list of bugers uneaten --}}
       <ul class="fa-ul">
         {{#each burgers}}
             {{#unless devoured}}
                 <li>
                     {{burger_name}}
-
                     <button class="change-burger" data-id="{{id}}" data-devoured="{{devoured}}">
                       Eat it!  
                     </button>
                 </li>
-            {{!-- {{> cats/cat-block sleep=true}} --}}
             {{/unless}}
         {{/each}}
         </ul>
+        {{!-- Bottom bun --}}
         <img src="/assets/img/bottom_bun.png" alt="Bottom of a hamburger bun">
     </div>
+    {{!-- The eaten list --}}
     <div class="col-lg-6 col-md-12">
       <h1>Ugh, my belly is full.</h1>
+      {{!-- Top bun --}}
       <img src="/assets/img/top_bun.png" alt="Top of a hamburger bun">
+      {{!-- List of eaten burgers --}}
       <ul class="fa-ul">
         {{#each burgers}}
             {{#if devoured}}
@@ -41,11 +47,8 @@
             {{/if}}
         {{/each}}
         </ul>
+        {{!-- Bottom bun --}}
         <img src="/assets/img/bottom_bun.png" alt="Bottom of a hamburger bun">
     </div>
   </div>
 </div>
-
-<script>
-  
-</script>

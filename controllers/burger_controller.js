@@ -7,13 +7,12 @@ var router = express.Router();
 
 // Create all our routes and set up logic within those routes where required.
 router.get("/", function(req, res) {
-    // console.log("/, get");
     burger.all(function(data) {
-        // console.log("DATA: " , data);
+        
     var hbsObject = {
       burgers: data
     };
-    // console.log("hbsObject : " , hbsObject);
+    
     res.render("index", hbsObject);
   });
 });
@@ -21,7 +20,7 @@ router.get("/", function(req, res) {
 router.post("/api/burgers/", function(req, res) {
     console.log(req.body);
     burger.create(["burger_name", "devoured"], [req.body.name, req.body.devoured], function(result) {
-    // Send back the ID of the new quote
+    // Send back the ID of the new burger
     res.json({ id: result.insertId });
   });
 });

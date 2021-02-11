@@ -37,7 +37,8 @@ $(function() {
         }
       );
     });
-
+    
+    // Change the color of the list items randomly based on an array of colors
     $('li').each(function() {
         var back = ["green","red","saddlebrown","goldenrod","orange","olive"];
         var rand = back[Math.floor(Math.random() * back.length)];
